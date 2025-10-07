@@ -36,8 +36,52 @@ Decision Log (Week 1)
 	•	Metrics @0.40: Acc 0.810, Prec 0.740, Rec 0.783, F1 0.761
 	•	Rationale: Better recall/F1 with acceptable precision trade-off.
 
-Next Week (Week 2 — Plan)
-	•	Pipeline + GridSearch (LogReg): tune C, class_weight, scoring=f1, cv=5
-	•	Compare with tuned Random Forest (max_depth, min_samples_*, max_features)
-	•	Lock threshold using validation, confirm on test
-	•	Add ROC/PR curves
+## Next Weeks — PhD-Aligned ML Foundations Roadmap (Oct 6 – Nov 2 2025)
+
+### Week 2 (Oct 13 – 19): Metrics and Evaluation
+**Goal:** Develop solid evaluation literacy and model-comparison intuition.  
+**Tasks:**
+- Implement Confusion Matrix, ROC and AUC plots.
+- Plot Precision–Recall curve; analyze class imbalance.
+- Simulate bias–variance trade-off by varying sample sizes.
+- Run GridSearchCV for hyperparameter tuning.
+- Finalize evaluation notebook with charts and push.
+- Read: Géron Chs 3–4; Brownlee (2021); Saito & Rehmsmeier (2015).
+- Deliverables:  
+  - `Week2_Model_Evaluation.ipynb`  
+  - Research Journal Entry #2 (metric selection + interpretation)
+
+---
+
+### Week 3 (Oct 20 – 26): Feature Engineering and Pipelines
+**Goal:** Build reproducible pipelines and feature-selection workflows.  
+**Tasks:**
+- Encode categorical features (OneHotEncoder, LabelEncoder).  
+- Apply scaling (StandardScaler / MinMaxScaler).  
+- Integrate into `Pipeline()` and test re-fit.  
+- Add `GridSearchCV` inside pipeline and save best params.  
+- Run feature selection (`SelectKBest` / RF importance).  
+- Deliverables:  
+  - `Week3_FeatureEngineering_Pipeline.ipynb`  
+  - Feature importance chart + updated README on reproducibility.  
+- Reading: Géron Chs 5–6 + Raschka (2022) blog on pipelines.
+
+---
+
+### Week 4 (Oct 27 – Nov 2): Mini-Project and Reflection
+**Goal:** Apply all techniques to a real-world dataset and publish results.  
+**Tasks:**
+- Download Kaggle Bank Customer Churn dataset.  
+- Perform EDA (correlations + distributions).  
+- Build preprocessing pipeline (scaler + encoder).  
+- Train LogReg, Random Forest, XGBoost.  
+- Compare ROC/AUC and classification reports.  
+- Write final README + visual summary.  
+- Deliverables:  
+  - `Churn_Prediction_Project.ipynb`  
+  - Final README + LinkedIn summary post.
+
+---
+
+📘 **Readings & Reflections:**  
+Each week ends with a research-journal note connecting the week’s readings (Géron, Brownlee, Raschka, Saito & Rehmsmeier, etc.) to your long-term PhD orientation — reproducibility, evaluation fairness, and transparent pipelines.
